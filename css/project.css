@@ -1,0 +1,252 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background: #ffffff;
+}
+
+nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 60px;
+  background: #2c3531;
+  font-family: "Poppins", sans-serif;
+  font-weight: bold;
+  z-index: 2;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  /* box-shadow: 0px 0px 30px #686868; */
+}
+
+.logo {
+  color: #e7e7e7;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  font-size: 20px;
+  text-shadow: 1px 3px 5px rgba(0, 0, 0, 0.377);
+}
+
+.nav-links li {
+  list-style: none;
+}
+
+.nav-links {
+  display: flex;
+  justify-content: space-around;
+  width: 40%;
+}
+
+nav li a {
+  color: #e7e7e7;
+  text-decoration: none;
+  letter-spacing: 3px;
+  font-weight: bold;
+  font-size: 14px;
+  transition: color 0.3s linear;
+}
+
+nav li a:hover {
+  color: #ffb46d;
+}
+
+.burger {
+  display: none;
+  cursor: pointer;
+}
+
+.burger div {
+  width: 25px;
+  height: 4px;
+  background: #e7e7e7;
+  margin: 5px;
+  transition: opacity 0.2s linear, transform 0.5s linear;
+}
+
+@media screen and (max-width: 1024px) {
+  .nav-links {
+    width: 60%;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .nav-links {
+    position: absolute;
+    height: 92vh;
+    top: 8vh;
+    right: 0mm;
+    background: #2c3531;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    transform: translateX(100%);
+    transition: transform 0.5s ease-in;
+  }
+  body {
+    overflow-x: hidden;
+  }
+  .nav-links li {
+    opacity: 0;
+  }
+  .burger {
+    display: block;
+  }
+}
+
+.nav-active {
+  transform: translateX(0);
+}
+
+@keyframes navLinkFade {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.toggle .line1 {
+  transform: rotate(-45deg) translate(-6px, 8px);
+}
+
+.toggle .line2 {
+  opacity: 0;
+}
+
+.toggle .line3 {
+  transform: rotate(45deg) translate(-4px, -7px);
+}
+
+
+
+
+.project-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#project-head {
+  text-transform: capitalize;
+  color: #2c3531;
+  text-align: center;
+  font-size: 4rem;
+  font-weight: bolder;
+  letter-spacing: 3px;
+  padding-top: 110px;
+}
+.underline {
+  background: #ffb46d;
+  width: 90px;
+  height: 5px;
+}
+.project-content {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  margin: 70px 30px 80px 30px;
+}
+.project-box {
+  background: #eaf2f3;
+  height: 100%;
+  width: 300px;
+  border-radius: 20px;
+  margin: 0px 10px;
+  transition: all 0.3s linear;
+}
+.img-block {
+  width: 100%;
+}
+#blog-img {
+  width: 100%;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+}
+.text-block {
+  margin: 20px 30px;
+}
+#artcle-heading {
+  font-size: 20px;
+  letter-spacing: 2px;
+  color: #2c3531;
+}
+#article-detail {
+  letter-spacing: 1px;
+  color: #606362;
+  margin: 10px 0px;
+  font-size: 12px;
+}
+#read-time {
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: #2c3531;
+  font-size: 12px;
+}
+#read-more {
+  font-size: 12px;
+  letter-spacing: 2px;
+  color: #ff912b;
+  transition: all 0.3s linear;
+}
+.project-box:hover {
+  box-shadow: 0px 0px 20px rgba(66, 66, 66, 0.507);
+  transform: translateY(-5px);
+}
+#read-more:hover {
+  color: #71d1b8;
+  cursor: pointer;
+}
+
+
+
+
+
+
+
+
+.fa-linkedin {
+  margin-left: 20px;
+}
+
+.fa-instagram {
+  margin-left: 20px;
+}
+.footer {
+  height: 200px;
+  background: #2c3531;
+  color: #e7e7e7;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 100%;
+}
+.footer-social-icon {
+  margin-top: 20px;
+}
+.footer-social-icon .fab {
+  transition: all 0.3s linear;
+  color: #e7e7e7;
+}
+.footer-social-icon .fab:hover {
+  color: #ff912b;
+  cursor: pointer;
+}
+.copyright-text {
+  letter-spacing: 1px;
+  margin: 0px 10px;
+  text-align: center;
+  font-size: 18px;
+}
+@media screen and (max-width: 800px) {
+  
+}
